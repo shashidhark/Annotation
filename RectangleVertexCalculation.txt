@@ -1,0 +1,43 @@
+Rectangle annotation with rotate option. 
+Challenge: Find coordinates when one vertex moved to some position.
+This is straight forward when the rectangle sides are vertical and horizontal. We 
+need to apply methematic theory to calculate this when the rectangle is rotated to an angle.
+
+
+Let ABCD be the vertices of a rectangle
+
+A--------B---B'
+|	 |   |
+|	 |   |
+D--------C---C'
+
+
+Let l1 is line represents one side of a rectangle. 
+Edge say A-B.
+
+Conside we moved point C to new location C'(x', y'), this changed the point B to B'.
+Following is the method to calculate B'.
+
+Let l2 is new line perpendicular to A-B passign through B'. 
+Edge say (B-C)' Line joining B1 and C'.
+
+Equation of line l1 : y = m1*x + b1 ---------1
+Equation of line l2 : y = (-1/m1)*x + b2 ----2
+Take m2 = -1/m1
+Hence
+
+From (1) we calculate: b1 = y - m1*x
+From (2) we calculate: b2 = y - m2*x
+Note: x and y can take from any vertex of a corresponding line
+
+y intercepts of this intersection is same, then from 1 & 2 we get
+m1*x + b1 = (-1/m1)*x + b2  -----------------3
+From this we can calculate x coordinate at intersection.
+
+Once we get x value, apply that value to the equation 1 or 2 to calculate y.
+
+These x and y is the coordinate of new point. B'.
+
+
+
+
